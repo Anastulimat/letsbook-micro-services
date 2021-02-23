@@ -29,3 +29,8 @@ http://localhost/api/v1/resources/books/all
 
 http://localhost/api/v1/resources/books?published=2000
 
+- To add a book: send a POST request to
+
+http://localhost/api/v1/resources/add/
+
+with the following fields inside the request (only `title` is mandatory): `author`, `published`, `id`, `title`, `first_sentence`.

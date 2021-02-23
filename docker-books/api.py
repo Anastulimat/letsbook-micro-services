@@ -14,8 +14,12 @@ def dict_factory(cursor, row):
 
 @app.route('/', methods=['GET'])
 def home():
-    return '''<h1>Distant Reading Archive</h1>
-<p>A prototype API for distant reading of science fiction novels.</p>'''
+    return '''<h1>This is the BOOKS Rest API</h1>
+<p>Connect to one of the followings (mind the URL, how it's formed):<br>
+    <a href="./api/v1/resources/books/all">Catalog</a><br>
+    <a href="./api/v1/resources/books?published=2000">Books published in 2000</a><br>
+    <a href="./api/v1/resources/books?author=Jo Walton">Books by Jo Walton</a><br>
+</p>'''
 
 
 @app.route('/api/v1/resources/books/all', methods=['GET'])
@@ -24,10 +28,28 @@ def api_all():
     conn.row_factory = dict_factory
     cur = conn.cursor()
     all_books = cur.execute('SELECT * FROM books;').fetchall()
-
     return jsonify(all_books)
 
   
+@app.route('/api/v1/resources/add/', methods=['POST'])
+def add_book():
+    author = request.form.get('author')
+    published = request.form.get('published')
+    book_id = request.form.get('id')
+    title = request.form.get('title')
+    first_sentence = request.form.get('first_sentence')
+
+    if (title is None):
+        print("Aborting - author is None")
+        return jsonify("Error - You need to post at least a title")
+    
+    conn = sqlite3.connect('books.db')
+    cur = conn.cursor()
+    cur.execute('insert into books (author, published, id, title, first_sentence) values (?,?,?,?,?);', (author,published, book_id, title, first_sentence,))
+    conn.commit()
+    return jsonify("Done")
+
+
 
 @app.errorhandler(404)
 def page_not_found(e):
