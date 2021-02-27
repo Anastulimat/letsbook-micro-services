@@ -1,17 +1,24 @@
 # Bookflix Micro-services
----
 
 ## Launch all services 
->docker-compose up -d
+```
+docker-compose up -d
+```
 
 ## Check services state
->docker-compose logs -f
+```
+docker-compose logs -f
+```
 
 ## Stop all services
->docker-compose stop
+```
+docker-compose stop
+```
 
 ## Remove all containers (Services)
->docker-compose down
+```
+docker-compose down
+```
 
 
 # Exemples (if you want to taste on Postman)
