@@ -21,7 +21,7 @@ docker-compose down
 ```
 
 
-# Exemples (if you want to taste on Postman)
+# Exemples (if you want to test on Postman)
 
 Check if `Books service` works
 ```
