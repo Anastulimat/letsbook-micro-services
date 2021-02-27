@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  docker_books:
+    build:
+      context: ./docker-books
+      dockerfile: dockerfile
+    ports: 
+      - "80:8000"
+    restart: always
+
+  docker_notes:
+    build:
+      context: ./docker-notes
+      dockerfile: dockerfile
+    ports: 
+      - "8080:8080"
+    restart: always
+
+  docker_comments:
+    build:
+      context: ./docker-comments
+      dockerfile: Dockerfile
+    ports: 
+      - "5001:5001"
+    restart: always
+
+  docker_user_auth:
+    build:
+      context: ./docker-jwt-user-auth
+      dockerfile: Dockerfile
+    ports: 
+      - "5000:5000"
+    restart: always
