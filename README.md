@@ -23,25 +23,27 @@ docker-compose down
 
 # Exemples (if you want to taste on Postman)
 
-## Check if "Books service" works
+## Check if `Books service` works
 ```
 http://localhost
 ```
 
-## Check if "Notes service" works
+## Check if `Notes service` works
 ```
 http://localhost:8080
 ```
 
-## Check if "Comments service" works
+## Check if `Comments service` works
 ```
 http://localhost:5001/api
 ```
 
-## Check if "Comments service" works
+## Check if `User auth service` works
 ```
 http://localhost:5000/api
 ```
+
+For more details of how to use each service, please check the README file present in each service.
 
 
 
