@@ -17,6 +17,6 @@
 
 
 ## Check if database connection works by retrieving data
->http://localhost:5000/api/user
+>http://localhost:5000/api/users
 
 
