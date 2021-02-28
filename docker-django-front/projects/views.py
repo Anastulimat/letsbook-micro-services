@@ -10,7 +10,7 @@ def project_index(request):
 
 def project_detail(request, pk):
     project = Project.objects.get(pk=pk)
-    response = requests.get('http://localhost/api/v1/resources/books/all')
+    response = requests.get('http://localhost:80/api/v1/resources/books/all')
     all_books = response.json()
     context = {"project": project, "books": all_books}
     return render(request, "project_detail.html", context)
