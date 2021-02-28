@@ -46,7 +46,12 @@ http://localhost:5000/api
 
 # Description
 
-Welcome to LetsBook !
+With this docker-compose.yml, you can access to LetsBook with this URL :
+```
+http://localhost:8002
+```
+
+## Welcome to LetsBook !
 
 You can log in with any user registered. 
 ex : 
