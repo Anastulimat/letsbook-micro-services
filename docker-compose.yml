@@ -31,3 +31,19 @@ services:
     ports: 
       - "5000:5000"
     restart: always
+
+  docker-django-front:
+    build:
+      context: ./docker-django-front
+      dockerfile: Dockerfile
+    ports: 
+      - "8081:8000"
+    restart: always
+
+  docker-front:
+    build:
+      context: ./docker-front
+      dockerfile: dockerfile
+    ports: 
+      - "8002:80"
+    restart: always
