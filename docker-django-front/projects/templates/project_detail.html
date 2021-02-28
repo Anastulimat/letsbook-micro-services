@@ -13,11 +13,30 @@
         <br>
         <h5>Technology used:</h5>
         <p>{{ project.technology }}</p>
-	<h5>Our suggestions</h5>
-	<p>You should read the book coming from this movie:</p>
-	<p>{{details.title}}</p>
-	<p>{{details.description}}</p>
-
+	<h5>Our catalog</h5>
+	<p>See below!</p>
+    </div>
+    <div class ="col-md-8">
+	 <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publication</th>
+                <th>First Sentence</th>
+            </tr>
+        </thead>
+	<tbody>
+	  {% for book in books %}
+          <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.published }} </td>
+            <td>{{ book.first_sentence }}</td>
+          </tr>
+          {% endfor %}
+	</tbody>
+	 </table>
     </div>
 </div>
 

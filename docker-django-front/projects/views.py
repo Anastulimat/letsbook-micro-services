@@ -10,14 +10,9 @@ def project_index(request):
 
 def project_detail(request, pk):
     project = Project.objects.get(pk=pk)
-    response = requests.get('https://ghibliapi.herokuapp.com/films')
-    vehicles = response.json()
-    movie1 = vehicles[0]
-    context = {"project": project, "details": movie1}
+    response = requests.get('http://localhost/api/v1/resources/books/all')
+    all_books = response.json()
+    context = {"project": project, "books": all_books}
     return render(request, "project_detail.html", context)
 
 
-def get_ip(request):
-    print("=====================================================YYYYYYYY================")
-    response = requests.get('https://ghibliapi.herokuapp.com/vehicles')
-    return response
