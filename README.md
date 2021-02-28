@@ -53,12 +53,12 @@ ex :
     - email : test@test.com
     - password : password
 
-![Login](images/login.jpg?raw=true)
+![Login](./images/login.jpg)
 
 LetsBook use JWT auth for user authentification !
 The docker-front ask the docker-jwt-auth for authentification.
 
-![JWT auth](images/login_redirection.jpg)
+![JWT auth](./images/login_redirection.jpg)
 
 The docker-front save the token of the user in his web browser'SessionStorage.
 
@@ -68,11 +68,11 @@ The user is redirect to the home page.
 
 Here you will see all the books we choose for you !
 
-![Home](https://github.com/Anastulimat/letsbook-micro-services/images/home.jpg?raw=true)
+![Home](./images/home.jpg)
 
 And the description of book looks like :
 
-![Description](https://github.com/Anastulimat/letsbook-micro-services/images/exemple.jpg?raw=true)
+![Description](./images/exemple.jpg)
 
 
 For more details of how to use each service, please check the README file present in each service.
