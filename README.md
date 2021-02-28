@@ -46,7 +46,7 @@ http://localhost:5000/api
 
 # Description
 
-Avec notre docker-compose.yml vous pouvez accéder à LetsBook à l'adresse suivante : 
+With this docker-compose.yml, you can access to LetsBook with this URL :
 ```
 http://localhost:8002
 ```
