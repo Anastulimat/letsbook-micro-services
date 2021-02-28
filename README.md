@@ -43,9 +43,38 @@ Check if `User auth service` works
 http://localhost:5000/api
 ```
 
+
+# Description
+
+Welcome to LetsBook !
+
+You can log in with any user registered. 
+ex : 
+    - email : test@test.com
+    - password : password
+
+![Login](https://github.com/Anastulimat/letsbook-micro-services/tree/master/images/login.jpg)
+
+LetsBook use JWT auth for user authentification !
+The docker-front ask the docker-jwt-auth for authentification.
+
+![JWT auth](https://github.com/Anastulimat/letsbook-micro-services/tree/master/images/login_redirection.jpg)
+
+The docker-front save the token of the user in his web browser'SessionStorage.
+
+![Token Session Storage](https://github.com/Anastulimat/letsbook-micro-services/tree/master/images/TokenSessionStorage.jpeg)
+
+The user is redirect to the home page.
+
+Here you will see all the books we choose for you !
+
+![Home](https://github.com/Anastulimat/letsbook-micro-services/tree/master/images/home.jpg)
+
+And the description of book looks like :
+
+![Description](https://github.com/Anastulimat/letsbook-micro-services/tree/master/images/exemple.jpg)
+
+
 For more details of how to use each service, please check the README file present in each service.
-
-
-
 
 
